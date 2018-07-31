@@ -1,0 +1,1287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>tuni.fi</ipxact:vendor>
+	<ipxact:library>communication</ipxact:library>
+	<ipxact:name>hibi_wrapper</ipxact:name>
+	<ipxact:version>4.0</ipxact:version>
+	<ipxact:busInterfaces>
+		<ipxact:busInterface>
+			<ipxact:name>agent_in</ipxact:name>
+			<ipxact:busType vendor="tut.fi" library="interface" name="HIBI_from_ip" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="tut.fi" library="interface" name="HIBI_from_ip.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>DATA</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>agent_data_in</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>AV</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>agent_av_in</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CMD</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>2</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>agent_comm_in</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>2</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>FULL</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>agent_full_out</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>WE</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>agent_we_in</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>ONE_P</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>agent_one_p_out</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave>
+				<ipxact:transparentBridge masterRef="bus_out"/>
+			</ipxact:slave>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>agent_out</ipxact:name>
+			<ipxact:busType vendor="tut.fi" library="interface" name="HIBI_to_ip" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="tut.fi" library="interface" name="HIBI_to_ip.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>DATA</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>agent_data_out</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>AV</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>agent_av_out</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CMD</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>agent_comm_out</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>RE</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>agent_re_in</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>EMPTY</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>agent_empty_out</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>ONE_D</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>agent_one_d_out</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:master>
+				<ipxact:addressSpaceRef addressSpaceRef="agent_address_space">
+					<ipxact:baseAddress>uuid_cc8e80cf_f12c_4f19_a4c5_bf6b4db93a6b</ipxact:baseAddress>
+				</ipxact:addressSpaceRef>
+			</ipxact:master>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>bus_in</ipxact:name>
+			<ipxact:busType vendor="tut.fi" library="interface" name="HIBI_bus" version="2.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="tut.fi" library="interface" name="HIBI_bus.absDef" version="2.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>DATA</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>bus_data_in</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>AV</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>bus_av_in</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CMD</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>2</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>bus_comm_in</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>2</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>FULL</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>bus_full_in</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>LOCK</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>bus_lock_in</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave>
+				<ipxact:transparentBridge masterRef="agent_out"/>
+			</ipxact:slave>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>bus_out</ipxact:name>
+			<ipxact:busType vendor="tut.fi" library="interface" name="HIBI_bus" version="2.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="tut.fi" library="interface" name="HIBI_bus.absDef" version="2.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>DATA</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>bus_data_out</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>AV</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>bus_av_out</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CMD</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>2</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>bus_comm_out</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>2</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>FULL</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>bus_full_out</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>LOCK</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>bus_lock_out</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:master/>
+		</ipxact:busInterface>
+	</ipxact:busInterfaces>
+	<ipxact:addressSpaces>
+		<ipxact:addressSpace>
+			<ipxact:name>agent_address_space</ipxact:name>
+			<ipxact:range>uuid_cc8e80cf_f12c_4f19_a4c5_bf6b4db93a6b &amp; (~uuid_cc8e80cf_f12c_4f19_a4c5_bf6b4db93a6b+1)</ipxact:range>
+			<ipxact:width>uuid_a2e51a90_41c1_4e30_b058_3ecec3cd12b1</ipxact:width>
+			<ipxact:addressUnitBits>8</ipxact:addressUnitBits>
+		</ipxact:addressSpace>
+	</ipxact:addressSpaces>
+	<ipxact:model>
+		<ipxact:views>
+			<ipxact:view>
+				<ipxact:name>flat_vhdl</ipxact:name>
+				<ipxact:envIdentifier>VHDL:Kactus2:</ipxact:envIdentifier>
+				<ipxact:componentInstantiationRef>vhdl_implementation</ipxact:componentInstantiationRef>
+			</ipxact:view>
+		</ipxact:views>
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>vhdl_implementation</ipxact:name>
+				<ipxact:language>VHDL</ipxact:language>
+				<ipxact:moduleName>hibi_wrapper_r4</ipxact:moduleName>
+				<ipxact:architectureName>structural</ipxact:architectureName>
+				<ipxact:moduleParameters>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_469b6919_fea4_47a3_b285_d3761177938c" usageType="nontyped">
+						<ipxact:name>addr_width_g</ipxact:name>
+						<ipxact:description>lte data_width</ipxact:description>
+						<ipxact:value>uuid_b2a5d7b9_e30d_4a64_8240_ac8cde092bb0</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_d163dc3f_4a3b_4195_bd6a_9493d05bf667" usageType="nontyped">
+						<ipxact:name>data_width_g</ipxact:name>
+						<ipxact:value>uuid_a2e51a90_41c1_4e30_b058_3ecec3cd12b1</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_d1059bff_2ee8_492b_9cde_781c211bbd78" usageType="nontyped">
+						<ipxact:name>comm_width_g</ipxact:name>
+						<ipxact:description>practically always 3</ipxact:description>
+						<ipxact:value>uuid_7d5f2330_02d3_4e92_8531_3e282c74df0a</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_5795f30f_cdd7_42d6_a06a_50a65e1011df" usageType="nontyped">
+						<ipxact:name>counter_width_g</ipxact:name>
+						<ipxact:description>gte (n_agents, max_send...)</ipxact:description>
+						<ipxact:value>uuid_0e369c19_e534_4e4e_b76c_f2c42b39b3c1</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_e2d1f6b6_7376_40ec_bc42_0ce8ec42ecd4" usageType="nontyped">
+						<ipxact:name>debug_width_g</ipxact:name>
+						<ipxact:description>for special monitors</ipxact:description>
+						<ipxact:value>uuid_2d4556a3_7422_45be_8375_5a15af83e29f</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_d6c9767d_81c4_461d_8ad8_30299d901d05" usageType="nontyped">
+						<ipxact:name>rx_fifo_depth_g</ipxact:name>
+						<ipxact:value>uuid_c4738ce5_ed3b_4aed_b7da_66846e77d859</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_b73f8481_7833_4fa3_990a_c538884ebecc" usageType="nontyped">
+						<ipxact:name>tx_fifo_depth_g</ipxact:name>
+						<ipxact:value>uuid_2b8933ea_8910_48a1_9c59_3e27b04414fb</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_8ccbcab8_697f_41ce_ac1e_c7367517fb00" usageType="nontyped">
+						<ipxact:name>rx_msg_fifo_depth_g</ipxact:name>
+						<ipxact:value>uuid_ab908b5e_d280_4b8e_8cc0_0c75b4e5d263</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_c08d6509_b91d_482e_bc11_57dffc034bbc" usageType="nontyped">
+						<ipxact:name>tx_msg_fifo_depth_g</ipxact:name>
+						<ipxact:value>uuid_e3305b7e_0fbd_4fef_8efe_d0b7ce43e759</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter choiceRef="fifo_type" dataType="integer" parameterId="uuid_6456a79f_c21a_41a9_8965_c8278a6bf948" usageType="nontyped">
+						<ipxact:name>fifo_sel_g</ipxact:name>
+						<ipxact:description>use 0 for synchronous systems</ipxact:description>
+						<ipxact:value>uuid_2cfd6bd8_6931_46e1_ab26_a53b726af45d</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_b54fe7b5_f3d5_477b_be9a_05be726f08e9" usageType="nontyped">
+						<ipxact:name>rel_agent_freq_g</ipxact:name>
+						<ipxact:value>uuid_ad158d2c_6a00_429e_b410_5f39c760a526</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_5d5998ff_7304_4215_8aec_8ef4c2bf1906" usageType="nontyped">
+						<ipxact:name>rel_bus_freq_g</ipxact:name>
+						<ipxact:value>uuid_b4a271a0_caa9_44be_9fee_d3e4b952ff41</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_c56a6809_fec6_4458_8d30_e4f15c147d62" usageType="nontyped">
+						<ipxact:name>addr_g</ipxact:name>
+						<ipxact:description>unique for each wrapper</ipxact:description>
+						<ipxact:value>uuid_cc8e80cf_f12c_4f19_a4c5_bf6b4db93a6b</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_cf246b4e_6ac2_4a07_90a4_186ecc22f0bf" usageType="nontyped">
+						<ipxact:name>inv_addr_en_g</ipxact:name>
+						<ipxact:description>only for bridges</ipxact:description>
+						<ipxact:value>uuid_dcd26a7c_2b2c_4e12_86f4_2a7aa3837ff5</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_8801601b_bd76_49aa_aecc_53166a9713f3" usageType="nontyped">
+						<ipxact:name>multicast_en_g</ipxact:name>
+						<ipxact:description>enable special addressing</ipxact:description>
+						<ipxact:value>uuid_6ae5f36e_a8a4_4b5d_a1ae_e1eaf98e1f76</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_77e4e925_7eca_46f6_a963_8c08685ef4ae" usageType="nontyped">
+						<ipxact:name>n_agents_g</ipxact:name>
+						<ipxact:description>within one segment</ipxact:description>
+						<ipxact:value>uuid_931ab3f3_6989_4815_bd50_da88e76ac4d1</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_4b386a03_c708_4f6e_a825_b6f0789150e5" usageType="nontyped">
+						<ipxact:name>prior_g</ipxact:name>
+						<ipxact:description>lte n_agents</ipxact:description>
+						<ipxact:value>uuid_81f6f19c_e8db_4d60_91c6_1da0e6a97a84</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_a10af579_ec1c_433f_9e9d_abd4760c2451" usageType="nontyped">
+						<ipxact:name>max_send_g</ipxact:name>
+						<ipxact:description>in words, 0 means unlimited</ipxact:description>
+						<ipxact:value>uuid_bb05097f_7c5d_45b2_9907_ca3aa98f8468</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_11851baa_740d_4a03_89c2_c6d22f87de02" usageType="nontyped">
+						<ipxact:name>n_time_slots_g</ipxact:name>
+						<ipxact:description>for TDMA</ipxact:description>
+						<ipxact:value>uuid_c7623080_8c18_4e11_955e_2864d17eb994</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter choiceRef="arbitration_type" dataType="integer" parameterId="uuid_13cc167d_0920_4b4d_958d_94e24f7a78bf" usageType="nontyped">
+						<ipxact:name>arb_type_g</ipxact:name>
+						<ipxact:value>uuid_59c34b70_c8d8_447c_81ee_4596d77dc907</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_a822551a_f083_48e2_b860_f0c0ce9dc0c3" usageType="nontyped">
+						<ipxact:name>keep_slot_g</ipxact:name>
+						<ipxact:description>for TDMA</ipxact:description>
+						<ipxact:value>uuid_eef5dc28_c6cb_4b42_a751_d3828218bbb0</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_748ad27a_2725_4aa8_b17b_0dde7b51269e" usageType="nontyped">
+						<ipxact:name>id_g</ipxact:name>
+						<ipxact:description>used instead of addr in recfg</ipxact:description>
+						<ipxact:value>uuid_a351274c_fbfb_4e3d_950d_1685d40cb7a2</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_862e643c_e2c9_413e_b799_852f8c524954" usageType="nontyped">
+						<ipxact:name>id_width_g</ipxact:name>
+						<ipxact:description>gte(log2(id_g))</ipxact:description>
+						<ipxact:value>uuid_659dc997_bfe8_40bb_88fd_22d295be47e4</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_d437d471_634c_459d_96b3_a4a2b13b1231" usageType="nontyped">
+						<ipxact:name>base_id_g</ipxact:name>
+						<ipxact:description>only for bridges</ipxact:description>
+						<ipxact:value>uuid_765c5d1f_4e1e_48cd_91a0_2aedcb1d1fce</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_e1cbd7d1_e8a1_4218_8d56_6f21dc2ac495" usageType="nontyped">
+						<ipxact:name>cfg_re_g</ipxact:name>
+						<ipxact:description>enable reading config</ipxact:description>
+						<ipxact:value>uuid_51e4bb98_a295_485f_9580_781f69e0896c</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_aae8b5a4_b805_422e_9e03_e8e5ce7501e2" usageType="nontyped">
+						<ipxact:name>cfg_we_g</ipxact:name>
+						<ipxact:description>enable writing config</ipxact:description>
+						<ipxact:value>uuid_059e7504_91a3_4324_9062_b100c4c45f8c</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_5391f8c8_507c_496b_af27_899cdad17c67" usageType="nontyped">
+						<ipxact:name>n_extra_params_g</ipxact:name>
+						<ipxact:description>app-specific registers</ipxact:description>
+						<ipxact:value>uuid_0319cd33_c2b2_4f56_8e23_f80cb57ee4be</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_972f9e36_38b7_4dca_8634_e56d97e2c4ac" usageType="nontyped">
+						<ipxact:name>n_cfg_pages_g</ipxact:name>
+						<ipxact:value>uuid_ceef8b5f_c389_4125_9435_ccbea742a1ac</ipxact:value>
+					</ipxact:moduleParameter>
+				</ipxact:moduleParameters>
+				<ipxact:fileSetRef>
+					<ipxact:localName>vhdl_sources</ipxact:localName>
+				</ipxact:fileSetRef>
+			</ipxact:componentInstantiation>
+		</ipxact:instantiations>
+		<ipxact:ports>
+			<ipxact:port>
+				<ipxact:name>bus_clk</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>0</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>agent_clk</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>0</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>bus_sync_clk</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>0</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>agent_sync_clk</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>0</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>rst_n</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>0</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>bus_comm_in</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>uuid_7d5f2330_02d3_4e92_8531_3e282c74df0a-1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic_vector</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>(others =&gt; '0')</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>bus_data_in</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>uuid_a2e51a90_41c1_4e30_b058_3ecec3cd12b1-1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic_vector</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>(others =&gt; '0')</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>bus_full_in</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>0</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>bus_lock_in</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>0</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>bus_av_in</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>0</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>agent_comm_in</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>uuid_7d5f2330_02d3_4e92_8531_3e282c74df0a-1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic_vector</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>(others =&gt; '0')</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>agent_data_in</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>uuid_a2e51a90_41c1_4e30_b058_3ecec3cd12b1-1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic_vector</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>(others =&gt; '0')</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>agent_av_in</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>0</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>agent_we_in</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>0</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>agent_re_in</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>0</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>bus_comm_out</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>uuid_7d5f2330_02d3_4e92_8531_3e282c74df0a-1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic_vector</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>bus_data_out</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>uuid_a2e51a90_41c1_4e30_b058_3ecec3cd12b1-1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic_vector</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>bus_full_out</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>bus_lock_out</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>bus_av_out</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>agent_comm_out</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>uuid_7d5f2330_02d3_4e92_8531_3e282c74df0a-1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic_vector</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>agent_data_out</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>uuid_a2e51a90_41c1_4e30_b058_3ecec3cd12b1-1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic_vector</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>agent_av_out</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>agent_full_out</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>agent_one_p_out</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>agent_empty_out</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>agent_one_d_out</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>debug_out</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>uuid_2d4556a3_7422_45be_8375_5a15af83e29f-1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic_vector</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>debug_in</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>uuid_2d4556a3_7422_45be_8375_5a15af83e29f-1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic_vector</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>0</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+		</ipxact:ports>
+	</ipxact:model>
+	<ipxact:choices>
+		<ipxact:choice>
+			<ipxact:name>fifo_type</ipxact:name>
+			<ipxact:enumeration text="Synch multiclk">0</ipxact:enumeration>
+			<ipxact:enumeration text="Basic GALS">1</ipxact:enumeration>
+			<ipxact:enumeration text="Gray FIFO">2</ipxact:enumeration>
+			<ipxact:enumeration text="Mixed clock">3</ipxact:enumeration>
+		</ipxact:choice>
+		<ipxact:choice>
+			<ipxact:name>arbitration_type</ipxact:name>
+			<ipxact:enumeration text="priority">1</ipxact:enumeration>
+			<ipxact:enumeration text="combined">2</ipxact:enumeration>
+			<ipxact:enumeration text="dynamically adaptive arbitration">3</ipxact:enumeration>
+			<ipxact:enumeration text="round-robin">0</ipxact:enumeration>
+		</ipxact:choice>
+	</ipxact:choices>
+	<ipxact:fileSets>
+		<ipxact:fileSet>
+			<ipxact:name>vhdl_sources</ipxact:name>
+			<ipxact:file>
+				<ipxact:name>../../../../../vhd/fifo_muxes.vhd</ipxact:name>
+				<ipxact:fileType>vhdlSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>1feabc2e7a37fda2015b59f1c394ae18b39f8f71</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>../../../../../vhd/hibi_wrapper_r1.vhd</ipxact:name>
+				<ipxact:fileType>vhdlSource</ipxact:fileType>
+				<ipxact:isStructural>true</ipxact:isStructural>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>058df03d965d15cfe92235dddd01c076158e4eb9</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>../../../../../vhd/hibi_wrapper_r4.vhd</ipxact:name>
+				<ipxact:fileType>vhdlSource</ipxact:fileType>
+				<ipxact:isStructural>true</ipxact:isStructural>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>../../../../../vhd/hibiv2_pkg.vhd</ipxact:name>
+				<ipxact:fileType>vhdlSource</ipxact:fileType>
+			</ipxact:file>
+		</ipxact:fileSet>
+	</ipxact:fileSets>
+	<ipxact:parameters>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_b2a5d7b9_e30d_4a64_8240_ac8cde092bb0" resolve="user">
+			<ipxact:name>addr_width_g</ipxact:name>
+			<ipxact:description>lte data_width</ipxact:description>
+			<ipxact:value>32</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="11" parameterId="uuid_a2e51a90_41c1_4e30_b058_3ecec3cd12b1" resolve="user">
+			<ipxact:name>data_width_g</ipxact:name>
+			<ipxact:value>32</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="10" parameterId="uuid_7d5f2330_02d3_4e92_8531_3e282c74df0a" resolve="user">
+			<ipxact:name>comm_width_g</ipxact:name>
+			<ipxact:description>practically always 3</ipxact:description>
+			<ipxact:value>3</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_0e369c19_e534_4e4e_b76c_f2c42b39b3c1" resolve="user">
+			<ipxact:name>counter_width_g</ipxact:name>
+			<ipxact:description>gte (n_agents, max_send...)</ipxact:description>
+			<ipxact:value>7</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="6" parameterId="uuid_2d4556a3_7422_45be_8375_5a15af83e29f" resolve="user">
+			<ipxact:name>debug_width_g</ipxact:name>
+			<ipxact:description>for special monitors</ipxact:description>
+			<ipxact:value>1</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_c4738ce5_ed3b_4aed_b7da_66846e77d859" resolve="user">
+			<ipxact:name>rx_fifo_depth_g</ipxact:name>
+			<ipxact:value>5</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_2b8933ea_8910_48a1_9c59_3e27b04414fb" resolve="user">
+			<ipxact:name>tx_fifo_depth_g</ipxact:name>
+			<ipxact:value>5</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_ab908b5e_d280_4b8e_8cc0_0c75b4e5d263" resolve="user">
+			<ipxact:name>rx_msg_fifo_depth_g</ipxact:name>
+			<ipxact:value>5</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_e3305b7e_0fbd_4fef_8efe_d0b7ce43e759" resolve="user">
+			<ipxact:name>tx_msg_fifo_depth_g</ipxact:name>
+			<ipxact:value>5</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter choiceRef="fifo_type" kactus2:usageCount="2" parameterId="uuid_2cfd6bd8_6931_46e1_ab26_a53b726af45d" resolve="user">
+			<ipxact:name>fifo_sel_g</ipxact:name>
+			<ipxact:description>use 0 for synchronous systems</ipxact:description>
+			<ipxact:value>0</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_ad158d2c_6a00_429e_b410_5f39c760a526" resolve="user">
+			<ipxact:name>rel_agent_freq_g</ipxact:name>
+			<ipxact:value>1</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_b4a271a0_caa9_44be_9fee_d3e4b952ff41" resolve="user">
+			<ipxact:name>rel_bus_freq_g</ipxact:name>
+			<ipxact:value>1</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="5" parameterId="uuid_cc8e80cf_f12c_4f19_a4c5_bf6b4db93a6b" resolve="user">
+			<ipxact:name>addr_g</ipxact:name>
+			<ipxact:description>unique for each wrapper</ipxact:description>
+			<ipxact:value>46</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_dcd26a7c_2b2c_4e12_86f4_2a7aa3837ff5">
+			<ipxact:name>inv_addr_en_g</ipxact:name>
+			<ipxact:description>only for bridges</ipxact:description>
+			<ipxact:value>0</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_6ae5f36e_a8a4_4b5d_a1ae_e1eaf98e1f76" resolve="user">
+			<ipxact:name>multicast_en_g</ipxact:name>
+			<ipxact:description>enable special addressing</ipxact:description>
+			<ipxact:value>0</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_931ab3f3_6989_4815_bd50_da88e76ac4d1" resolve="user">
+			<ipxact:name>n_agents_g</ipxact:name>
+			<ipxact:description>within one segment</ipxact:description>
+			<ipxact:value>4</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_81f6f19c_e8db_4d60_91c6_1da0e6a97a84" resolve="user">
+			<ipxact:name>prior_g</ipxact:name>
+			<ipxact:description>lte n_agents</ipxact:description>
+			<ipxact:value>2</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_bb05097f_7c5d_45b2_9907_ca3aa98f8468" resolve="user">
+			<ipxact:name>max_send_g</ipxact:name>
+			<ipxact:description>in words, 0 means unlimited</ipxact:description>
+			<ipxact:value>50</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_c7623080_8c18_4e11_955e_2864d17eb994" resolve="user">
+			<ipxact:name>n_time_slots_g</ipxact:name>
+			<ipxact:description>for TDMA</ipxact:description>
+			<ipxact:value>0</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter choiceRef="arbitration_type" kactus2:usageCount="2" parameterId="uuid_59c34b70_c8d8_447c_81ee_4596d77dc907" resolve="user">
+			<ipxact:name>arb_type_g</ipxact:name>
+			<ipxact:value>0</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_eef5dc28_c6cb_4b42_a751_d3828218bbb0" resolve="user">
+			<ipxact:name>keep_slot_g</ipxact:name>
+			<ipxact:description>for TDMA</ipxact:description>
+			<ipxact:value>1</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_a351274c_fbfb_4e3d_950d_1685d40cb7a2" resolve="user">
+			<ipxact:name>id_g</ipxact:name>
+			<ipxact:description>used instead of addr in recfg</ipxact:description>
+			<ipxact:value>5</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_659dc997_bfe8_40bb_88fd_22d295be47e4" resolve="user">
+			<ipxact:name>id_width_g</ipxact:name>
+			<ipxact:description>gte(log2(id_g))</ipxact:description>
+			<ipxact:value>4</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_765c5d1f_4e1e_48cd_91a0_2aedcb1d1fce" resolve="user">
+			<ipxact:name>base_id_g</ipxact:name>
+			<ipxact:description>only for bridges</ipxact:description>
+			<ipxact:value>5</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_51e4bb98_a295_485f_9580_781f69e0896c" resolve="user">
+			<ipxact:name>cfg_re_g</ipxact:name>
+			<ipxact:description>enable reading config</ipxact:description>
+			<ipxact:value>0</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_059e7504_91a3_4324_9062_b100c4c45f8c" resolve="user">
+			<ipxact:name>cfg_we_g</ipxact:name>
+			<ipxact:description>enable writing config</ipxact:description>
+			<ipxact:value>0</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_0319cd33_c2b2_4f56_8e23_f80cb57ee4be" resolve="user">
+			<ipxact:name>n_extra_params_g</ipxact:name>
+			<ipxact:description>app-specific registers</ipxact:description>
+			<ipxact:value>0</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="2" parameterId="uuid_ceef8b5f_c389_4125_9435_ccbea742a1ac" resolve="user">
+			<ipxact:name>n_cfg_pages_g</ipxact:name>
+			<ipxact:value>1</ipxact:value>
+		</ipxact:parameter>
+	</ipxact:parameters>
+	<ipxact:vendorExtensions>
+		<kactus2:author>pekkarie</kactus2:author>
+		<kactus2:fileDependencies>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>../../../../../vhd/fifo_muxes.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/integer.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity integer</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>../../../../../vhd/fifo_muxes.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/hibiv2_pkg.vhd</kactus2:fileRef2>
+				<ipxact:description>Reference to a package hibiv2_pkg</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>../../../../../vhd/hibi_wrapper_r1.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/double_fifo_demux_wr.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity double_fifo_demux_wr</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>../../../../../vhd/hibi_wrapper_r1.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/double_fifo_mux_rd.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity double_fifo_mux_rd</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>../../../../../vhd/hibi_wrapper_r1.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/receiver.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity receiver</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>../../../../../vhd/hibi_wrapper_r1.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/transmitter.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity transmitter</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>../../../../../vhd/hibi_wrapper_r1.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/hibiv2_pkg.vhd</kactus2:fileRef2>
+				<ipxact:description>Reference to a package hibiv2_pkg</ipxact:description>
+			</kactus2:fileDependency>
+		</kactus2:fileDependencies>
+		<kactus2:version>3,6,14,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>IP</kactus2:kts_productHier>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
+		<kactus2:license>GPL2</kactus2:license>
+	</ipxact:vendorExtensions>
+</ipxact:component>
