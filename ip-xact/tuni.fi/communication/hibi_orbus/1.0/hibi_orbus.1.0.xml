@@ -9,10 +9,10 @@
 		<ipxact:busInterface>
 			<ipxact:name>slave_0</ipxact:name>
 			<ipxact:description>HIBI bus &lt;---&gt; wrapper slave interface</ipxact:description>
-			<ipxact:busType vendor="tut.fi" library="interface" name="HIBI_bus" version="2.0"/>
+			<ipxact:busType vendor="tuni.fi" library="interface" name="HIBI_bus" version="2.0"/>
 			<ipxact:abstractionTypes>
 				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="tut.fi" library="interface" name="HIBI_bus.absDef" version="2.0"/>
+					<ipxact:abstractionRef vendor="tuni.fi" library="interface" name="HIBI_bus.absDef" version="2.0"/>
 					<ipxact:portMaps>
 						<ipxact:portMap>
 							<ipxact:logicalPort>
@@ -105,10 +105,10 @@
 		<ipxact:busInterface>
 			<ipxact:name>slave_1</ipxact:name>
 			<ipxact:description>HIBI bus &lt;---&gt; wrapper slave interface</ipxact:description>
-			<ipxact:busType vendor="tut.fi" library="interface" name="HIBI_bus" version="2.0"/>
+			<ipxact:busType vendor="tuni.fi" library="interface" name="HIBI_bus" version="2.0"/>
 			<ipxact:abstractionTypes>
 				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="tut.fi" library="interface" name="HIBI_bus.absDef" version="2.0"/>
+					<ipxact:abstractionRef vendor="tuni.fi" library="interface" name="HIBI_bus.absDef" version="2.0"/>
 					<ipxact:portMaps>
 						<ipxact:portMap>
 							<ipxact:logicalPort>
@@ -201,10 +201,10 @@
 		<ipxact:busInterface>
 			<ipxact:name>slave_2</ipxact:name>
 			<ipxact:description>HIBI bus &lt;---&gt; wrapper slave interface</ipxact:description>
-			<ipxact:busType vendor="tut.fi" library="interface" name="HIBI_bus" version="2.0"/>
+			<ipxact:busType vendor="tuni.fi" library="interface" name="HIBI_bus" version="2.0"/>
 			<ipxact:abstractionTypes>
 				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="tut.fi" library="interface" name="HIBI_bus.absDef" version="2.0"/>
+					<ipxact:abstractionRef vendor="tuni.fi" library="interface" name="HIBI_bus.absDef" version="2.0"/>
 					<ipxact:portMaps>
 						<ipxact:portMap>
 							<ipxact:logicalPort>
@@ -297,10 +297,10 @@
 		<ipxact:busInterface>
 			<ipxact:name>slave_3</ipxact:name>
 			<ipxact:description>HIBI bus &lt;---&gt; wrapper slave interface</ipxact:description>
-			<ipxact:busType vendor="tut.fi" library="interface" name="HIBI_bus" version="2.0"/>
+			<ipxact:busType vendor="tuni.fi" library="interface" name="HIBI_bus" version="2.0"/>
 			<ipxact:abstractionTypes>
 				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="tut.fi" library="interface" name="HIBI_bus.absDef" version="2.0"/>
+					<ipxact:abstractionRef vendor="tuni.fi" library="interface" name="HIBI_bus.absDef" version="2.0"/>
 					<ipxact:portMaps>
 						<ipxact:portMap>
 							<ipxact:logicalPort>
@@ -393,10 +393,10 @@
 		<ipxact:busInterface>
 			<ipxact:name>bus_out</ipxact:name>
 			<ipxact:description>HIBI bus &lt;---&gt; wrapper master interface</ipxact:description>
-			<ipxact:busType vendor="tut.fi" library="interface" name="HIBI_bus" version="2.0"/>
+			<ipxact:busType vendor="tuni.fi" library="interface" name="HIBI_bus" version="2.0"/>
 			<ipxact:abstractionTypes>
 				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="tut.fi" library="interface" name="HIBI_bus.absDef" version="2.0"/>
+					<ipxact:abstractionRef vendor="tuni.fi" library="interface" name="HIBI_bus.absDef" version="2.0"/>
 					<ipxact:portMaps>
 						<ipxact:portMap>
 							<ipxact:logicalPort>
@@ -914,5 +914,6 @@
 			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
 			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
 		</kactus2:kts_attributes>
+		<kactus2:license>GPL2</kactus2:license>
 	</ipxact:vendorExtensions>
 </ipxact:component>

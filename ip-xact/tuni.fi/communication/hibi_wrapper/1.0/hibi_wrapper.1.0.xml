@@ -7,10 +7,10 @@
 	<ipxact:busInterfaces>
 		<ipxact:busInterface>
 			<ipxact:name>bus_in</ipxact:name>
-			<ipxact:busType vendor="tut.fi" library="interface" name="HIBI_bus" version="2.0"/>
+			<ipxact:busType vendor="tuni.fi" library="interface" name="HIBI_bus" version="2.0"/>
 			<ipxact:abstractionTypes>
 				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="tut.fi" library="interface" name="HIBI_bus.absDef" version="2.0"/>
+					<ipxact:abstractionRef vendor="tuni.fi" library="interface" name="HIBI_bus.absDef" version="2.0"/>
 					<ipxact:portMaps>
 						<ipxact:portMap>
 							<ipxact:logicalPort>
@@ -59,10 +59,10 @@
 		</ipxact:busInterface>
 		<ipxact:busInterface>
 			<ipxact:name>bus_out</ipxact:name>
-			<ipxact:busType vendor="tut.fi" library="interface" name="HIBI_bus" version="2.0"/>
+			<ipxact:busType vendor="tuni.fi" library="interface" name="HIBI_bus" version="2.0"/>
 			<ipxact:abstractionTypes>
 				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="tut.fi" library="interface" name="HIBI_bus.absDef" version="2.0"/>
+					<ipxact:abstractionRef vendor="tuni.fi" library="interface" name="HIBI_bus.absDef" version="2.0"/>
 					<ipxact:portMaps>
 						<ipxact:portMap>
 							<ipxact:logicalPort>
@@ -151,10 +151,10 @@
 		</ipxact:busInterface>
 		<ipxact:busInterface>
 			<ipxact:name>agent_in</ipxact:name>
-			<ipxact:busType vendor="tut.fi" library="interface" name="HIBI_from_ip" version="1.0"/>
+			<ipxact:busType vendor="tuni.fi" library="interface" name="HIBI_from_ip" version="1.0"/>
 			<ipxact:abstractionTypes>
 				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="tut.fi" library="interface" name="HIBI_from_ip.absDef" version="1.0"/>
+					<ipxact:abstractionRef vendor="tuni.fi" library="interface" name="HIBI_from_ip.absDef" version="1.0"/>
 					<ipxact:portMaps>
 						<ipxact:portMap>
 							<ipxact:logicalPort>
@@ -251,10 +251,10 @@
 		</ipxact:busInterface>
 		<ipxact:busInterface>
 			<ipxact:name>agent_out</ipxact:name>
-			<ipxact:busType vendor="tut.fi" library="interface" name="HIBI_to_ip" version="1.0"/>
+			<ipxact:busType vendor="tuni.fi" library="interface" name="HIBI_to_ip" version="1.0"/>
 			<ipxact:abstractionTypes>
 				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="tut.fi" library="interface" name="HIBI_to_ip.absDef" version="1.0"/>
+					<ipxact:abstractionRef vendor="tuni.fi" library="interface" name="HIBI_to_ip.absDef" version="1.0"/>
 					<ipxact:portMaps>
 						<ipxact:portMap>
 							<ipxact:logicalPort>
@@ -355,10 +355,10 @@
 		</ipxact:busInterface>
 		<ipxact:busInterface>
 			<ipxact:name>agent_msg_in</ipxact:name>
-			<ipxact:busType vendor="tut.fi" library="interface" name="HIBI_from_ip" version="1.0"/>
+			<ipxact:busType vendor="tuni.fi" library="interface" name="HIBI_from_ip" version="1.0"/>
 			<ipxact:abstractionTypes>
 				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="tut.fi" library="interface" name="HIBI_from_ip.absDef" version="1.0"/>
+					<ipxact:abstractionRef vendor="tuni.fi" library="interface" name="HIBI_from_ip.absDef" version="1.0"/>
 					<ipxact:portMaps>
 						<ipxact:portMap>
 							<ipxact:logicalPort>
@@ -445,10 +445,10 @@
 		</ipxact:busInterface>
 		<ipxact:busInterface>
 			<ipxact:name>agent_msg_out</ipxact:name>
-			<ipxact:busType vendor="tut.fi" library="interface" name="HIBI_to_ip" version="1.0"/>
+			<ipxact:busType vendor="tuni.fi" library="interface" name="HIBI_to_ip" version="1.0"/>
 			<ipxact:abstractionTypes>
 				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="tut.fi" library="interface" name="HIBI_to_ip.absDef" version="1.0"/>
+					<ipxact:abstractionRef vendor="tuni.fi" library="interface" name="HIBI_to_ip.absDef" version="1.0"/>
 					<ipxact:portMaps>
 						<ipxact:portMap>
 							<ipxact:logicalPort>

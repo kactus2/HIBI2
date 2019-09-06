@@ -13,16 +13,16 @@ TODO.
 [//]: # (TODO)
 [//]: # (Explain how to run the basic tester simulation)
 
-## Authors
+## Contributors
 
-HIBI2 is a result of a long-time collaborative effort in Tampere University. The 
-following list of contributors is in no particular order (and may be incomplete):
+HIBI2 is a result of a long-time collaborative research effort in Tampere University. 
+The following list of contributors (in no particular order) may be incomplete:
 * Erno Salminen
 * Ari Kulmala
 * Timo Alho
 * Tero Kangas
 * Kimmo Kuusilinna
-
+* Timo D. Hämäläinen
 
 ## License
 
